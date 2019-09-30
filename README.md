@@ -1,4 +1,4 @@
-![author](https://img.shields.io/badge/author-Marco%20Cusano-blue.svg) ![version](https://img.shields.io/badge/jQuery-3%2B-brightgreen.svg?logo=jquery) ![jquery-version](https://img.shields.io/badge/version-3%2B-brightgreen.svg)
+![author](https://img.shields.io/badge/author-Marco%20Cusano-blue.svg) ![version](https://img.shields.io/badge/jQuery-3%2B-brightgreen.svg?logo=jquery) ![jquery-version](https://img.shields.io/badge/version-1.0-brightgreen.svg)
 
 # jquery.editable
 Let's start using any DOM as an input with data-types. Adding a **data-type** the plugin will automatically check the content allowing you to write and copy informations only onAllowed values. You can also bind an **editable** dom to an input, using `data-input`, to copy the editable dom data in the input value.
