@@ -46,7 +46,7 @@ PARAMETER | DESCRIPTION
 ----------|------------
 `data-content` | Force check content only in `data-content` value.
 `data-max` | Define a maximum number (for **data-type**="number/double/price" only).
-`data-max` | Define a minimum number (for **data-type**="number/double/price" only).
+`data-min` | Define a minimum number (for **data-type**="number/double/price" only).
 `data-onchange` | Execute a custom function on data change.
 `data-onevent` | Setup a custom event.
 `data-onfunction` | Execute a custom function on a defined custom event.
