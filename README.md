@@ -1,4 +1,4 @@
-![author](https://img.shields.io/badge/author-Marco%20Cusano-blue.svg) ![version](https://img.shields.io/badge/jQuery-3%2B-brightgreen.svg?logo=jquery) ![jquery-version](https://img.shields.io/badge/version-1.0-brightgreen.svg)
+![author](https://img.shields.io/badge/author-Marco%20Cusano-blue.svg) ![version](https://img.shields.io/badge/jQuery-3%2B-brightgreen.svg?logo=jquery) ![jquery-version](https://img.shields.io/badge/version-1.1-brightgreen.svg)
 
 # jquery.editable
 Let's start using any DOM as an input with data-types. Adding a **data-type** the plugin will automatically check the content allowing you to write and copy informations only onAllowed values. You can also bind an **editable** dom to an input, using `data-input`, to copy the editable dom data in the input value.
@@ -48,8 +48,12 @@ PARAMETER | DESCRIPTION
 `data-max` | Define a maximum number (for **data-type**="number/double/price" only).
 `data-min` | Define a minimum number (for **data-type**="number/double/price" only).
 `data-onchange` | Execute a custom function on data change.
+`data-onclick` | Execute a custom function on element click.
+`data-onend` | Execute a custom function on end of the first initialization.
 `data-onevent` | Setup a custom event.
-`data-onfunction` | Execute a custom function on a defined custom event.
+`data-onfocusout` | Execute a custom function on element focus out.
+`data-onfunction` | Execute a custom function on a defined custom event (`data-onevent`).
+`data-placeholder` | Remove automatically the element content onClick, restore it onFocusOut if == false || empty.
 `data-type="<type>"` | `double`, `email`, `link`, `number`, `price`, __`text` *(**default**)*__, `textarea`.
 `editable="true"`| Initialize an object as a standard text input.
 
@@ -83,7 +87,13 @@ This kind of binding, allows you to copy a number you write in your `<h1>` into 
 </div>
 ```
 
-#### Call a custom event and a custom function
+#### How to use `data-placeholder`:
+You must add the same data in `data-placeholder` of the element content. For example if the editable element contains "Something like this" then the `data-placeholder` will be `data-placeholder="Something like this"`. This data will be automatically removed on element click and restore if the data is empty or false/null. Here an example:
+```HTML
+<p editable="true" data-placeholder="Type anything here...">Type anything here...</p>
+```
+
+#### Call a custom event and a custom function:
 You can also call a custom event on an element, executing a custom function as in the following example:
 ```HTML
 <script>
@@ -98,5 +108,11 @@ You can also call a custom event on an element, executing a custom function as i
 ```
 
 ## Change Log
+#### v1.1 (2019/10/01)
+- Added `data-placeholder` parameter;
+- Added `data-onclick` event and custom event;
+- Added `data-onfocusout` event and custom event;
+- Added `data-onend` custom event;
+- Code optimization.
 #### v1.0 (2019/09/26)
-First release of jquery.editable
+- First release of jquery.editable
